@@ -2,7 +2,7 @@
 
 Analysis code for the single-cell RNA-seq study of antero-posterior (AP)
 gastruloids grown under hypoxia (HAP-gastruloids). ESC-derived structures were
-profiled across four conditions — normoxic (NAP), hypoxic (HAP), hypoxic + XAV939
+profiled across four conditions, normoxic (NAP), hypoxic (HAP), hypoxic + XAV939
 (HAPX), and HIF1A-KO and annotated against mouse (Qiu et al. 2022, Qiu et al. 2024) and human
 (Xu et al. 2023, Zeng et al. 2023) developmental references.
 
@@ -77,8 +77,7 @@ app/                          HAPView — interactive Shiny explorer (see below)
 ```
 
 **Note on ordering:** `04` writes an intermediate QC'd object
-(`data/scRNAseq/Asmb.rds`) early, which `03` reads for its TOME staging step;
-In practice the dependency is: `04` (QC) → `03`
+(`data/scRNAseq/Asmb.rds`) early, which `03` reads for its TOME staging step.
 
 ---
 
@@ -138,7 +137,7 @@ TASOSOID_PRELOAD="data/HAP_OMG.rds" \
   Rscript -e "shiny::runApp('app', port = 3838, host = '0.0.0.0')"
 ```
 
-Performance notes: the metadata table previews the first 500 cells (full data used for counts/pie); `FindAllMarkers()` on a large object can take 1–5 min.
+Performance notes: The metadata table previews the first 500 cells (full data used for counts/pie). `FindAllMarkers()` on a large object can take 1–5 min.
 
 ---
 
