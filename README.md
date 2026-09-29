@@ -45,8 +45,8 @@ To run `04` on the GEO files, place each condition's three files under
 renamed to `count_matrix.mtx.gz` / `cell_metadata.csv.gz` / `all_genes.csv.gz`
 (or edit the `base` path and `read_parse_sample()` at the top of `04` to read the
 flat GEO names directly). Public reference atlases (OMG/TOME/Xu/Zeng) are
-downloaded from their original sources. See the header comments in `01`, `03`,
-and `07` for the download URLs and accessions.
+downloaded from their original sources. See the header comments in `01` and `03`,
+for the download URLs and accessions.
 
 ---
 
@@ -54,8 +54,7 @@ and `07` for the download URLs and accessions.
 
 All paths in the scripts are **relative to the repository root**. Set the
 working directory to the repo root before running.
-Large inputs and generated outputs are not tracked (see
-`.gitignore`); create the `data/`, `images/`, and `tables/` folders as needed.
+Large inputs and generated outputs are not tracked; create the `data/`, `images/`, and `tables/` folders as needed.
 
 ```
 01_build_OMG_reference.R      Build the OMG reference (Qiu et al. 2024)
@@ -106,9 +105,8 @@ R 4.4.1. Core packages:
 install.packages(c("Seurat", "Matrix", "dplyr", "tibble", "tidyr", "ggplot2",
                    "stringr", "patchwork", "circlize", "ComplexHeatmap",
                    "ggrastr", "ggrepel", "RColorBrewer"))
-# trajectory / integration / references:
-#   monocle3, SeuratWrappers, scDblFinder, DoubletFinder, homologene,
-#   org.Mm.eg.db, AnnotationDbi
+# trajectory / references:
+#   monocle3, SeuratWrappers, scDblFinder, org.Mm.eg.db, AnnotationDbi
 ```
 
 Key versions used: Seurat 5.1.0, Monocle3, scDblFinder 1.18.0. Parse data were
