@@ -81,6 +81,8 @@ app/                          HAPView — interactive Shiny explorer (see below)
 **Note on ordering:** `04` writes an intermediate QC'd object
 (`data/scRNAseq/Asmb.rds`) early, which `03` reads for its TOME staging step.
 
+---
+
 ## Figures 
 
 1. **Analysis** (`01`-`06`) annotated Seurat objects in data/scRNAseq/
