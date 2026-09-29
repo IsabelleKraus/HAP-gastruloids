@@ -259,7 +259,7 @@ Asmb <- subset(Asmb, cells = keep_asmb)
 meta_tls <- TLS_projected@meta.data
 meta_tls$key <- paste(meta_tls$condition, meta_tls$predicted.celltype_updated, sep = "||")
 keep_tls <- rownames(meta_tls)[meta_tls$key %in% allowed_pairs]
-TLS_projected <- subset(TLS_OMG, cells = keep_tls)
+TLS_projected <- subset(TLS_projected, cells = keep_tls)
 
 table(Asmb$condition, Asmb$predicted.celltype_updated)
 table(TLS_projected$condition, TLS_projected$predicted.celltype_updated)
