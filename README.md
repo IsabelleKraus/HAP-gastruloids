@@ -73,6 +73,8 @@ Large inputs and generated outputs are not tracked (see
                               from Seurat / Monocle3 objects
                               (source_data/*.tsv.gz)
 ParaxMesoderm_Marker.R        Supplementary: OMG and TOME marker-overlap analysis
+figures/                      One script per figure: source_data/ -> panels (PDF)
+                              + Source Data 
 scripts/OMG_colors.r          Colour palettes (OMG cell states / stages)
 scripts/TOME_colors.r         Colour palettes (TOME cell states / stages)
 app/                          HAPView — interactive Shiny explorer (see below)
