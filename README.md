@@ -3,8 +3,7 @@
 Analysis code for the single-cell RNA-seq study of antero-posterior (AP)
 gastruloids grown under hypoxia (HAP-gastruloids). ESC-derived structures were
 profiled across four conditions, normoxic (NAP), hypoxic (HAP), hypoxic + XAV939
-(HAPX), and HIF1A-KO and annotated against mouse (Qiu et al. 2022, Qiu et al. 2024) and human
-(Xu et al. 2023, Zeng et al. 2023) developmental references.
+(HAPX), and HIF1A-KO and annotated against mouse developmental references (Qiu et al. 2022, Qiu et al. 2024).
 
 > The developing embryo is guided by continuously changing signals from its
 > microenvironment, among these, restricted oxygen (hypoxia) is a critical
@@ -70,6 +69,9 @@ Large inputs and generated outputs are not tracked (see
                               cross-condition UMAP projections
 07_human_references.R         Cross-species staging vs. human atlases
                               (Xu 2023, Zeng 2023)
+08_export_source_data.R       Export tables behind every scRNA-seq figure
+                              from Seurat / Monocle3 objects
+                              (source_data/*.tsv.gz)
 ParaxMesoderm_Marker.R        Supplementary: OMG and TOME marker-overlap analysis
 scripts/OMG_colors.r          Colour palettes (OMG cell states / stages)
 scripts/TOME_colors.r         Colour palettes (TOME cell states / stages)
@@ -78,6 +80,19 @@ app/                          HAPView — interactive Shiny explorer (see below)
 
 **Note on ordering:** `04` writes an intermediate QC'd object
 (`data/scRNAseq/Asmb.rds`) early, which `03` reads for its TOME staging step.
+
+## Figures 
+
+1. **Analysis** (`01`-`06`) annotated Seurat objects in data/scRNAseq/
+2. **Export** (`08_export_source_data.R`) one table per plotted dataset in `source_data/`. Steps 1-2 can be skipped, because tables are available.
+3. **Figures** (`figures/`) one PDF per panel in `images/` and Source Data Sheets (`source_data/Source_data_*.xlsx`)
+
+```
+# from the repository root, with source_data/ downloaded
+Rscript figures/Figure1.R
+Rscript figures/ED4.R
+# ...
+```
 
 ---
 
