@@ -67,8 +67,6 @@ Large inputs and generated outputs are not tracked (see
 05_pseudotime.R               Monocle3 pseudotime trajectory (HAP condition)
 06_marker_expression.R        Per-condition marker FeaturePlots and
                               cross-condition UMAP projections
-07_human_references.R         Cross-species staging vs. human atlases
-                              (Xu 2023, Zeng 2023)
 08_export_source_data.R       Export tables behind every scRNA-seq figure
                               from Seurat / Monocle3 objects
                               (source_data/*.tsv.gz)
