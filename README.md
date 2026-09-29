@@ -104,7 +104,7 @@ R 4.4.1. Core packages:
 ```r
 install.packages(c("Seurat", "Matrix", "dplyr", "tibble", "tidyr", "ggplot2",
                    "stringr", "patchwork", "circlize", "ComplexHeatmap",
-                   "ggrastr", "ggrepel", "RColorBrewer"))
+                   "ggrastr", "ggrepel", "RColorBrewer", "openxlsx", "readr"))
 # trajectory / references:
 #   monocle3, SeuratWrappers, scDblFinder, org.Mm.eg.db, AnnotationDbi
 ```
@@ -133,7 +133,7 @@ cell-type column (auto-detects names containing *celltype* / *cluster* / *ident*
 **Dependencies** (installed automatically on first launch if missing):
 `shiny`, `shinydashboard`, `shinyWidgets`, `DT`, `Seurat`, `ggplot2`, `plotly`,
 `viridis`, `pheatmap`, `RColorBrewer`, `dplyr`, `tibble`, `scales`, `ggrepel`,
-`patchwork`.
+`patchwork`. 
 
 **Run it** (the app file is `app/app.R`):
 
