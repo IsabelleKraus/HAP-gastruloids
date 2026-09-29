@@ -44,7 +44,7 @@ To run `04` on the GEO files, place each condition's three files under
 `data/scRNAseq/filtered_matrices/output_combined/<condition>/DGE_filtered/`,
 renamed to `count_matrix.mtx.gz` / `cell_metadata.csv.gz` / `all_genes.csv.gz`
 (or edit the `base` path and `read_parse_sample()` at the top of `04` to read the
-flat GEO names directly). Public reference atlases (OMG/TOME/Xu/Zeng) are
+flat GEO names directly). Public reference atlases (OMG/TOME) are
 downloaded from their original sources. See the header comments in `01` and `03`,
 for the download URLs and accessions.
 
